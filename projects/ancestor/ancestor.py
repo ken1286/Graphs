@@ -19,7 +19,7 @@ def earliest_ancestor(ancestors, starting_node):
     stack.push([starting_node])
     paths = []
 
-    print(anGraph.vertices)
+    # print(anGraph.vertices)
 
     while stack.size() > 0:
         path = stack.pop()
@@ -45,10 +45,10 @@ def earliest_ancestor(ancestors, starting_node):
         return -1
 
     if len(paths[-1]) == len(paths[-2]):
-        print(paths[-2][-1])
+        # print(paths[-2][-1])
         return paths[-2][-1]
     else:
-        print(paths[-1][-1])
+        # print(paths[-1][-1])
         return paths[-1][-1]
 
 
