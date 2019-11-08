@@ -110,12 +110,29 @@ class SocialGraph:
 
 if __name__ == '__main__':
     sg = SocialGraph()
-    sg.populateGraph(1000, 25)
+    sg.populateGraph(20, 5)
     # print("USERS:")
     # print(sg.users)
     # print("FRIENDSHIPS:")
     # print(sg.friendships)
-    test_user = 1
+    test_user = 3
     connections = sg.getAllSocialPaths(test_user)
     print(f"CONNECTIONS TO USER: {test_user}")
     print(connections)
+
+
+# if roomID not in visited:
+#             visited.add(roomID)
+#             if '?' in traversalGraph[roomID].values() and lastRoom in traversalGraph[roomID].values():
+#                 route.append(opp_dir(lastDir))
+#                 qq.dequeue()
+#                 break
+#             else:
+#                 for dir, id in traversalGraph[roomID].items():
+#                     if id == lastRoom:
+#                         route.append(opp_dir(dir))
+#                         lastDir = dir
+#                     lastRoom = path[-1]
+#                     new_path = list(path)
+#                     new_path.append(id)
+#                     qq.enqueue(new_path)
