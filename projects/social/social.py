@@ -1,5 +1,5 @@
 import random
-from util import Queue
+from util import Queue, Stack, Graph
 
 
 class User:
@@ -91,7 +91,7 @@ class SocialGraph:
         qq = Queue()
         visited = {}  # Note that this is a dictionary, not a set
         qq.enqueue([userID])  # starting node
-        # BFS
+        # BFT
         while qq.size() > 0:
             path = qq.dequeue()
             vertex = path[-1]
@@ -110,11 +110,11 @@ class SocialGraph:
 
 if __name__ == '__main__':
     sg = SocialGraph()
-    sg.populateGraph(10, 2)
+    sg.populateGraph(1000, 25)
     # print("USERS:")
     # print(sg.users)
-    print("FRIENDSHIPS:")
-    print(sg.friendships)
+    # print("FRIENDSHIPS:")
+    # print(sg.friendships)
     test_user = 1
     connections = sg.getAllSocialPaths(test_user)
     print(f"CONNECTIONS TO USER: {test_user}")

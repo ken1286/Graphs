@@ -57,4 +57,4 @@ an_test = [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7),
 
 
 earliest_ancestor(an_test, 9)
-print(earliest_ancestor(an_test, 9))
+print(earliest_ancestor(an_test, 3))
