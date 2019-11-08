@@ -49,11 +49,11 @@ def opp_dir(dir):
 testing = True
 while len(traversalGraph) < len(roomGraph5):
     while stack.size() > 0:
-        print('CURRENT STACK:', stack.stack)
+        # print('CURRENT STACK:', stack.stack)
         currentRoomID = stack.pop()
-        print('CURRENT ROOM ID:', currentRoomID)
-        print('CURRENT TRAV GRAPH:', traversalGraph)
-        print('ROOMS EXPLORED:', len(traversalGraph))
+        # print('CURRENT ROOM ID:', currentRoomID)
+        # print('CURRENT TRAV GRAPH:', traversalGraph)
+        # print('ROOMS EXPLORED:', len(traversalGraph))
         
         if currentRoomID not in traversalGraph:
             traversalGraph[currentRoomID] = {}
@@ -127,15 +127,15 @@ while len(traversalGraph) < len(roomGraph5):
             lastRoomID = player.currentRoom.id
             traversalPath.append(step)
             player.travel(step)
-        print('ROUTE:', route)
+        # print('ROUTE:', route)
         
         
         stack.push(player.currentRoom.id)
 
-print('ROUTE', route)
-print(player.currentRoom.id)
-print('PATH:', path)
-print(traversalGraph)
+# print('ROUTE', route)
+# print(player.currentRoom.id)
+# print('PATH:', path)
+# print(traversalGraph)
 
 
 # Fill this out
@@ -143,6 +143,15 @@ print(traversalGraph)
 
 
 # TRAVERSAL TEST
+traversalCopy = []
+# for i in range(len(traversalPath)):
+#     if player.travel(traversalPath[i]) is not False:
+#         traversalCopy.append(traversalPath[i])
+#         player.travel(traversalPath[i])
+    
+# traversalPath = traversalCopy
+
+print(traversalPath)
 visited_rooms = set()
 player.currentRoom = world.startingRoom
 visited_rooms.add(player.currentRoom)
